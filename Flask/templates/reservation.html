@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservation Details</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+        }
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        p {
+            margin-bottom: 10px;
+        }
+        .home-btn {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .home-btn a {
+            text-decoration: none;
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+        .home-btn a:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Reservation Successful</h1>
+        <p><strong>Guest Name:</strong> {{ guest_name }}</p>
+        <p><strong>Room Number:</strong> {{ room_number }}</p>
+        <p><strong>Floor:</strong> {{ floor }}</p>
+        <p><strong>Duration of Stay:</strong> {{ duration_of_stay }} days</p>
+        <p><strong>Food Allergies:</strong> {{ allergies }}</p>
+        <p><strong>Total Charge:</strong> R{{ duration_of_stay * 500 }}</p>
+        <div class="home-btn">
+            <a href="/">Go Back to Home</a>
+        </div>
+    </div>
+</body>
+</html>
